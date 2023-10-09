@@ -1,20 +1,23 @@
 version: '3'
 
 services:
-  frontend:
-    build: ./frontend
-    container_name: front
+  client:
+    build: ./client
+    container_name: client
     tty: true
+    stdin_open: true
     volumes:
-      - ./frontend/app:/front
+      - ./client/app:/client
     ports:
       - '5173:5173'
+    command: sh -c "npm run dev"
 
-  backend:
-    build: ./backend
-    container_name: back
+  server:
+    build: ./server
+    container_name: server
     tty: true
+    stdin_open: true
     volumes:
-      - ./backend/src:/app
+      - ./server/src:/server
     ports:
       - '8080:8080'
