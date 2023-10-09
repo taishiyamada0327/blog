@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  frontend:
+    build: ./frontend
+    container_name: front
+    tty: true
+    volumes:
+      - ./frontend/app:/front
+    ports:
+      - '5173:5173'
+
+  backend:
+    build: ./backend
+    container_name: back
+    tty: true
+    volumes:
+      - ./backend/src:/app
+    ports:
+      - '8080:8080'
