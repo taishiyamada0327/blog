@@ -7,7 +7,7 @@ services:
     tty: true
     stdin_open: true
     volumes:
-      - ./client/app:/client
+      - ./client:/client
     ports:
       - '5173:5173'
     command: sh -c "npm run dev"
@@ -18,6 +18,6 @@ services:
     tty: true
     stdin_open: true
     volumes:
-      - ./server/src:/server
+      - ./server/src:/app
     ports:
       - '8080:8080'

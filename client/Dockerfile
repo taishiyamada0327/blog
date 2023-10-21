@@ -1,5 +1,6 @@
-FROM node:latest
+FROM node:20
 
-WORKDIR /client
+WORKDIR /client/app
 
-RUN npm install -g npm@latest && npm install -g vite@latest
+RUN npm install -g npm@latest \
+  npm install -g vite@latest
