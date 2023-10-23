@@ -3,7 +3,7 @@ export default function Heading() {
   return(
     <>
       <div className="bg-white">
-        <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
+        <div className="mx-auto max-w-screen-2xl px-4 md:px-64">
           <div className="rounded-lg bg-gray-100 px-4 py-6 md:py-8 lg:py-12">
             <p className="mb-2 text-center font-semibold text-indigo-500 md:mb-3 lg:text-lg">Introducing</p>
 
